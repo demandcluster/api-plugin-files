@@ -16,8 +16,8 @@ const {
   RemoteUrlWorker,
   TempFileStoreWorker
 } = require("@reactioncommerce/file-collections");
-const GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;
-
+//const GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;
+const S3Store = require("@outgrowio/reaction-file-collections-sa-s3").default;
 /**
  * @returns {undefined}
  */

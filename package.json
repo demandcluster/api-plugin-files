@@ -1,7 +1,7 @@
 {
   "name": "@demandcluster/api-plugin-files",
   "description": "Files plugin for the Reaction API (forked to include S3)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "type": "module",
   "engines": {
