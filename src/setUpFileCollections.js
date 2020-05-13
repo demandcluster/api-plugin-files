@@ -5,8 +5,10 @@ import fetch from "node-fetch";
 import sharp from "sharp";
 import config from "./config.js";
 import createSaveImageJob from "./util/createSaveImageJob.js";
+import { existedTypeNameMessage } from "graphql/validation/rules/UniqueTypeNames";
 
 const require = createRequire(import.meta.url);
+
 
 const {
   FileDownloadManager,
@@ -16,11 +18,13 @@ const {
   RemoteUrlWorker,
   TempFileStoreWorker
 } = require("@reactioncommerce/file-collections");
-const GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;
+/*const GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;*/
 
+const S3Store = require("@outgrowio/reaction-file-collections-sa-s3").default;
 /**
  * @returns {undefined}
  */
+
 export default function setUpFileCollections({
   absoluteUrlPrefix,
   context,
@@ -31,6 +35,8 @@ export default function setUpFileCollections({
 }) {
   FileRecord.downloadEndpointPrefix = "/assets/files";
   FileRecord.absoluteUrlPrefix = absoluteUrlPrefix;
+
+
 
   // 1024*1024*2 is the GridFSStore default chunk size, and 256k is default GridFS chunk size, but performs terribly
   const gridFSStoresChunkSize = 1 * 1024 * 1024;
@@ -75,12 +81,10 @@ export default function setUpFileCollections({
    * @returns {GridFSStore} New GridFS store instance
    */
   const buildGFS = ({ name, transform }) => (
-    new GridFSStore({
-      chunkSize: gridFSStoresChunkSize,
-      collectionPrefix: "cfs_gridfs.",
-      db,
-      mongodb,
-      name,
+    new S3Store({
+      name, // Should be provided within buildGFS
+      isPublic: true,
+      objectACL: "public-read",
       async transformWrite(fileRecord) {
         if (!transform) return null;
 

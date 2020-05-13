@@ -1,7 +1,7 @@
 {
-  "name": "@reactioncommerce/api-plugin-files",
-  "description": "Files plugin for the Reaction API",
-  "version": "0.0.0-development",
+  "name": "@demandcluster/api-plugin-files",
+  "description": "Files plugin for the Reaction API (forked to include S3)",
+  "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "engines": {
@@ -12,7 +12,7 @@
   "email": "engineering@reactioncommerce.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reactioncommerce/api-plugin-files.git"
+    "url": "git+https://github.com/rondlite/api-plugin-files.git"
   },
   "author": {
     "name": "Reaction Commerce",
@@ -21,13 +21,14 @@
   },
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/reactioncommerce/api-plugin-files/issues"
+    "url": "https://github.com/demandcluster/api-plugin-files/issues"
   },
   "sideEffects": false,
   "dependencies": {
     "@reactioncommerce/api-utils": "^1.9.0",
     "@reactioncommerce/file-collections": "~0.7.0",
     "@reactioncommerce/file-collections-sa-gridfs": "~0.1.0",
+    "@outgrowio/reaction-file-collections-sa-s3": "1.1.1",
     "@reactioncommerce/logger": "~1.1.2",
     "@reactioncommerce/random": "~1.0.2",
     "@reactioncommerce/reaction-error": "~1.0.1",
