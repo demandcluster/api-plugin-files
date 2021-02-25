@@ -1,7 +1,7 @@
 {
   "name": "@demandcluster/api-plugin-files",
   "description": "Files plugin for the Reaction API (forked to include S3)",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "type": "module",
   "engines": {
@@ -12,10 +12,10 @@
   "email": "engineering@reactioncommerce.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rondlite/api-plugin-files.git"
+    "url": "git+https://github.com/demandcluster/api-plugin-files.git"
   },
   "author": {
-    "name": "Reaction Commerce",
+    "name": "Reaction Commerce/DemandCluster",
     "email": "engineering@reactioncommerce.com",
     "url": "https://reactioncommerce.com"
   },
@@ -25,17 +25,17 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@reactioncommerce/api-utils": "^1.14.4",
-    "@reactioncommerce/file-collections": "~0.7.0",
-    "@reactioncommerce/file-collections-sa-gridfs": "~0.1.0",
+    "@reactioncommerce/api-utils": "^1.14.5",
+    "@reactioncommerce/file-collections": "~0.9.3",
+    "@reactioncommerce/file-collections-sa-gridfs": "~0.1.5",
     "@outgrowio/reaction-file-collections-sa-s3": "1.1.1",
     "@reactioncommerce/logger": "~1.1.2",
     "@reactioncommerce/random": "~1.0.2",
     "@reactioncommerce/reaction-error": "~1.0.1",
     "envalid": "~5.0.0",
     "node-fetch": "~2.6.0",
-    "sharp": "~0.25.2",
-    "simpl-schema": "~1.8.0"
+    "sharp": "~0.26.1",
+    "simpl-schema": "~1.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
