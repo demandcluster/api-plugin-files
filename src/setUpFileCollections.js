@@ -24,7 +24,6 @@ try {
    S3Dummy = require("@outgrowio/reaction-file-collections-sa-s3").default;
 }
 const S3Store=S3Dummy;
-delete S3Dummy;
 
 
 /**
