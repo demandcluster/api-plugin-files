@@ -25,7 +25,6 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@demandcluster/demandcluster-nodecdn": "^0.3.3",
     "@outgrowio/reaction-file-collections-sa-s3": "^1.1.1",
     "@reactioncommerce/api-utils": "^1.16.5",
     "@reactioncommerce/file-collections": "~0.9.3",
@@ -55,6 +54,9 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "husky": "^4.2.3",
     "semantic-release": "^17.0.4"
+  },
+  "optionalDependencies":{
+    "@demandcluster/demandcluster-nodecdn": "^0.4.0"
   },
   "scripts": {
     "lint": "npm run lint:eslint",

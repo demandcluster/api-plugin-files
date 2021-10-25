@@ -17,7 +17,16 @@ const {
   TempFileStoreWorker
 } = require("@reactioncommerce/file-collections");
 //const GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;
-const S3Store = require("@outgrowio/reaction-file-collections-sa-s3").default;
+let S3Dummy;
+try {
+   S3Dummy = require("@demandcluster/demandcluster-nodecdn").default;
+}catch{
+   S3Dummy = require("@outgrowio/reaction-file-collections-sa-s3").default;
+}
+const S3Store=S3Dummy;
+delete S3Dummy;
+
+
 /**
  * @returns {undefined}
  */
