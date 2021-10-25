@@ -21,14 +21,6 @@ stages:
     env:
       HOME: /home/jenkins
       NPM_CONFIG_CACHE: /home/jenkins/.npm
-- name: Test
-  steps:
-  - runScriptConfig:
-      image: node:latest
-      shellScript: npm run test
-    env:
-      HOME: /home/jenkins
-      NPM_CONFIG_CACHE: /home/jenkins/.npm
 - name: Release
   steps:
   - runScriptConfig:
