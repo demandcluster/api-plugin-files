@@ -1,7 +1,7 @@
 {
   "name": "@demandcluster/api-plugin-files",
   "description": "Files plugin for the Reaction API (forked to include S3)",
-  "version": "1.16.1",
+  "version": "1.16.2",
   "main": "index.js",
   "type": "module",
   "engines": {
@@ -25,10 +25,11 @@
   },
   "sideEffects": false,
   "dependencies": {
+    "@demandcluster/demandcluster-nodecdn": "^0.3.3",
+    "@outgrowio/reaction-file-collections-sa-s3": "^1.1.1",
     "@reactioncommerce/api-utils": "^1.16.5",
     "@reactioncommerce/file-collections": "~0.9.3",
     "@reactioncommerce/file-collections-sa-gridfs": "~0.1.5",
-    "@outgrowio/reaction-file-collections-sa-s3": "^1.1.1",
     "@reactioncommerce/logger": "~1.1.2",
     "@reactioncommerce/random": "~1.0.2",
     "@reactioncommerce/reaction-error": "~1.0.1",
