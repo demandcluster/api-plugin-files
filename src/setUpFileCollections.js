@@ -16,16 +16,16 @@ const {
   RemoteUrlWorker,
   TempFileStoreWorker
 } = require("@reactioncommerce/file-collections");
-//const GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;
+// nconst GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;
 let S3Dummy;
 try {
-   S3Dummy = require("@demandcluster/demandcluster-nodecdn").default;
-}catch{
-   S3Dummy = require("@outgrowio/reaction-file-collections-sa-s3").default;
+  S3Dummy = require("@demandcluster/demandcluster-nodecdn").default;
+} catch {
+  S3Dummy = require("@outgrowio/reaction-file-collections-sa-s3").default;
 }
-const S3Store=S3Dummy;
+const S3Store = S3Dummy;
 
-
+/* eslint-disable no-unused-vars */
 /**
  * @returns {undefined}
  */
@@ -41,7 +41,7 @@ export default function setUpFileCollections({
   FileRecord.absoluteUrlPrefix = absoluteUrlPrefix;
 
   // 1024*1024*2 is the GridFSStore default chunk size, and 256k is default GridFS chunk size, but performs terribly
-  const gridFSStoresChunkSize = 1 * 1024 * 1024;
+  // const gridFSStoresChunkSize = 1 * 1024 * 1024;
 
   /**
    * Image files are resized to 4 different sizes:
