@@ -16,8 +16,14 @@ const {
   RemoteUrlWorker,
   TempFileStoreWorker
 } = require("@reactioncommerce/file-collections");
-
-const S3Store = require("@outgrowio/reaction-file-collections-sa-s3").default;
+// nconst GridFSStore = require("@reactioncommerce/file-collections-sa-gridfs").default;
+let S3Dummy;
+try {
+  S3Dummy = require("@demandcluster/demandcluster-nodecdn").default;
+} catch {
+  S3Dummy = require("@outgrowio/reaction-file-collections-sa-s3").default;
+}
+const S3Store = S3Dummy;
 
 /* eslint-disable no-unused-vars */
 /**

@@ -55,6 +55,9 @@
     "husky": "^4.2.3",
     "semantic-release": "^17.0.4"
   },
+  "optionalDependencies":{
+    "@demandcluster/demandcluster-nodecdn": "^0.4.8"
+  },
   "scripts": {
     "lint": "npm run lint:eslint",
     "lint:eslint": "eslint ."
