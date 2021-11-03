@@ -17,7 +17,7 @@ const {
   TempFileStoreWorker
 } = require("@reactioncommerce/file-collections");
 
-const S3Store =  require("@outgrowio/reaction-file-collections-sa-s3").default;
+const S3Store = require("@outgrowio/reaction-file-collections-sa-s3").default;
 
 /* eslint-disable no-unused-vars */
 /**
