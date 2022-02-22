@@ -56,7 +56,7 @@
     "semantic-release": "^17.0.4"
   },
   "optionalDependencies": {
-    "@demandcluster/demandcluster-nodecdn": "1.0.9"
+    "@demandcluster/demandcluster-nodecdn": "1.0.10"
   },
   "scripts": {
     "lint": "npm run lint:eslint",
